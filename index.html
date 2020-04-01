@@ -2,10 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto&display=swap" rel="stylesheet"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <div class="home">
+                <a href="#">Home</a>
+                <hr id="homeHR">
+            </div>
+            <div class="contact">
+                <a href="#">Contact</a>
+                <hr id="contactHR">
+            </div>
+            <div class="myWork">
+                <a href="#">My Work</a>
+                <hr id="myWorkHR">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="homeSection">
+                <h3>Hi, I'm Isadora.</h3>
+                <h1>Designer. Food lover. Developer.</h1>
+                <p>I'm a web developer. My passion is to help small buissnises build proffesinal looking websites. If your firm wants a new website just contact me!</p>
+        </section>
+        
+        <section class="contactSection">
+            <h1>Say Hallo.</h1>
+            <p>Fill out the form below or email me at isadora.galindohohn@gmail.com</p>
+            
+            <div class="contactForm">
+                <form id="contactForm" action="contact-form-handler.php" method="post">
+                    
+                    <input name="name" type="text" class="form-control" placeholder="Name" required>
+                    <input name="email" type="email" class="form-control" placeholder="Email" required>
+                    <textarea name="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+                    
+                    <input type="submit" class="form-control submit" value="SEND MESSAGE">
+                </form>
+            </div>
+
+
+        </section>
+
+    </main>
 </body>
 </html>

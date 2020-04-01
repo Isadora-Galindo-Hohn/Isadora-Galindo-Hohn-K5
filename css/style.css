@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    color: rgb(212, 209, 209);
+    font-size: 16px;
+}
+
+body{
+    background-color: #1d1d1d;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav{
+    font-family: Oswald;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #000000;
+    text-align: center;
+}
+
+nav div{
+    padding-top: 1rem;
+    padding-bottom: 0;
+}
+
+hr{
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    color: #2C7B10;
+    border: 2px solid;
+}
+
+#homeHR{
+
+}
+
+#contactHR{
+    display: none;
+}
+
+#myWorkHR{
+    display: none;
+}
+
+nav div a{
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+section{
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+form{
+    margin-top: 1rem;
+}
+
+.form-control{
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+input{
+    height: 2rem;
+}
+
+form .submit{
+    background-color: #2C7B10;
+    border-color: transparent;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    height: 3rem;
+    margin-top: 1.2rem;
+    border-radius: 1.5rem;
+}
+
+form .submit:hover{
+    background-color: rgb(29, 78, 12);
+    cursor: pointer;
+}
+
+h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
