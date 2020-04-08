@@ -29,10 +29,6 @@ hr{
     border: 2px solid;
 }
 
-#homeHR{
-
-}
-
 #contactHR{
     display: none;
 }
@@ -51,6 +47,18 @@ section{
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+}
+
+#homeSection{
+
+}
+
+#contactSection{
+    display: none;
+}
+
+#workSection{
+    display: none;
 }
 
 form{
