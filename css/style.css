@@ -1,5 +1,9 @@
 * {
-    margin: 0;
+    margin:0;
+    padding:0;
+    border:0 none;
+    position: relative; 
+    outline: none;
     color: rgb(212, 209, 209);
     font-size: 16px;
 }
@@ -9,18 +13,19 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
-body::before{
-}
-
- 
-
 h1{
-    font-size: 2rem;
-    text-transform: uppercase;
-    padding-bottom: 1rem;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #dfdfdf;
+    letter-spacing: 5px;
+    text-shadow: 4px 4px 0px #000, 
+      -4px 0 0px #000,
+      7px 4px 0 #fff;
+      text-transform: uppercase;
 }
 
 h3{
+    font-size: 2.5rem;
     padding-bottom: 1rem;
 }
 
@@ -72,7 +77,19 @@ nav div a{
     padding-top: 3rem;
 }
 
-#homeSection h1,
+#homeSection h1{
+        font-size: 3rem;
+        font-weight: bold;
+        color: #dfdfdf;
+        letter-spacing: 5px;
+        text-shadow: 4px 4px 0px #000, 
+          -4px 0 0px #000,
+          7px 4px 0 #fff;
+          text-transform: uppercase;
+          
+    margin: 0 3rem;
+}
+
 #homeSection h3,
 #homeSection p{
     color: #000000;
@@ -80,6 +97,13 @@ nav div a{
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+}
+
+#homeSection p{
+    padding-top: .5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000000;
 }
 
 #contactSection{
@@ -137,8 +161,11 @@ form .submit:hover{
     margin: 3rem;
     display: flex;
     flex-direction: column;
+    text-align: center;
     gap: 1.5rem;
 }
+
+
 
 .flex{
     display: flex;
@@ -146,77 +173,72 @@ form .submit:hover{
     gap: 2rem;
 }
 
-.grid {
-    background-color: #000000;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-columns: 1fr 2fr;
-    margin-bottom: 2rem;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    position: relative;
-    overflow: hidden;
-    -webkit-transition-property: color;
-    transition-property: color;
+h4 {
+  width: 100%;
+  font-weight: normal;
+  text-align: center;
+  margin: 3rem auto 0;
 }
 
-
-.grid:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #2C7B10;
-    border-radius: 100%;
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
+h4 > a {
+  text-decoration: none;
+  font-size: 2rem;
+  z-index: 1;
+}
+h4 > a:before {
+  content: "";
+  background: #2C7B10;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  border-radius: 5px;
+  transform: scaleX(0);
+  animation: 1.4s forwards no-hover-v linear;
+  animation-fill-mode: forwards;
+  z-index: -1;
 }
 
-.grid img{
-    max-width: 35vw;
-    grid-column: 1/2;
-    grid-row: 1/3;
+h4 > a:hover:before,
+h4 > a:focus:before {
+  animation: .5s forwards hover-v linear;
+  animation-fill-mode: forwards;
 }
 
-a{
-    text-decoration: none;
+@keyframes hover-v {
+  0% {
+      transform: scaleX(0);
+      height: 5px;
+     }
+  45% {   
+      transform: scaleX(1.05);
+      height: 5px;
+     }
+  55% {height: 5px;}
+  100% {
+      transform: scaleX(1.05);
+      height: 2.5rem;
+     }
+}
+@keyframes no-hover-v {
+  0% {
+      transform: scaleX(1.05);
+      height: 2.5rem;
+     }
+  45% {height: 5px;}
+  55% {   
+      transform: scaleX(1.05);
+      height: 5px;
+      opacity: 1;
+     }
+  
+  100% {
+      transform: scaleX(0);
+      height: 5px;
+      opacity: .02;
+     }
 }
 
-.grid h4{
-    text-align: left;
-    padding: 1rem .5rem .2rem .5rem;
-}
-
-.grid p{
-    text-align: left;
-    padding: 1rem .5rem .2rem .5rem;
-}
-
-.grid:hover, .grid:focus, .grid:active {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    color: white;
-}
-
-.grid:hover:before, .grid:focus:before, .grid:active:before {
-    -webkit-transform: scale(2);
-    transform: scale(2);
-}
 
 footer{
     background-color: #000000;
