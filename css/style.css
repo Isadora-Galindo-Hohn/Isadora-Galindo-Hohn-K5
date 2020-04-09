@@ -9,6 +9,21 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+body::before{
+}
+
+ 
+
+h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+}
+
+h3{
+    padding-bottom: 1rem;
+}
+
 nav{
     font-family: Oswald;
     display: grid;
@@ -42,23 +57,42 @@ nav div a{
     font-size: 1.2rem;
 }
 
-section{
+#homeSection{
+    width: 100%;
+    height: 90vh;
+    background-image: url("img/time-lapse-photography-of-curved-road-with-vehicles-passing-2437299.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    filter: grayscale(50%);
+}
+
+#homeSection h3{
+    padding-top: 3rem;
+}
+
+#homeSection h1,
+#homeSection h3,
+#homeSection p{
+    color: #000000;
+    margin: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#contactSection{
+    display: none;
     margin: 3rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-#homeSection{
-
-}
-
-#contactSection{
-    display: none;
-}
-
-#workSection{
-    display: none;
+#contactSection p a{
+    color: #2C7B10;
+    text-decoration: underline;
 }
 
 form{
@@ -98,7 +132,121 @@ form .submit:hover{
     cursor: pointer;
 }
 
-h1{
-    font-size: 2rem;
-    text-transform: uppercase;
+#workSection{
+    display: none;
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.grid {
+    background-color: #000000;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 2fr;
+    margin-bottom: 2rem;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition-property: color;
+    transition-property: color;
+}
+
+
+.grid:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #2C7B10;
+    border-radius: 100%;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.grid img{
+    max-width: 35vw;
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+
+a{
+    text-decoration: none;
+}
+
+.grid h4{
+    text-align: left;
+    padding: 1rem .5rem .2rem .5rem;
+}
+
+.grid p{
+    text-align: left;
+    padding: 1rem .5rem .2rem .5rem;
+}
+
+.grid:hover, .grid:focus, .grid:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    color: white;
+}
+
+.grid:hover:before, .grid:focus:before, .grid:active:before {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+}
+
+footer{
+    background-color: #000000;
+    padding: 2rem;
+    bottom: 0px;
+    position: fixed;
+    width: 100vw;
+    text-align: center;
+}
+
+footer i {
+    padding-top: .5rem;
+    letter-spacing: 1.2rem;
+    text-align: center;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+  
+footer p:hover{
+    color: #2C7B10; 
+    cursor: context-menu;
+}
+
+footer i:hover, footer i:focus, footer i:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    color: #2C7B10;
 }
