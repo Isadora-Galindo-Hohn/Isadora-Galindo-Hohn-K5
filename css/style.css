@@ -14,20 +14,30 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+
 h1{
-    font-size: 4rem;
+    font-size: 2.3rem;
     font-weight: bold;
     color: #dfdfdf;
     letter-spacing: 5px;
     text-shadow: 4px 4px 0px #000, 
-      -4px 0 0px #000,
-      7px 4px 0 #fff;
-      text-transform: uppercase;
+        -4px 0 0px #000,
+        7px 4px 0 #fff;
+    text-transform: uppercase;  
 }
 
 h3{
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     padding-bottom: 1rem;
+    padding-top: 3rem;
+}
+/*END ALLMÄNT*/
+
+
+
+/*NAV*/
+header{
+    background-color: #000000; 
 }
 
 nav{
@@ -36,11 +46,18 @@ nav{
     grid-template-columns: repeat(3, 1fr);
     background-color: #000000;
     text-align: center;
+    max-width: 60vw;
 }
 
 nav div{
     padding-top: 1rem;
     padding-bottom: 0;
+}
+
+nav div a{
+    text-decoration: none;
+    font-size: 1.4rem;
+    text-transform: uppercase;
 }
 
 hr{
@@ -54,87 +71,40 @@ hr{
     display: none;
 }
 
-i:hover{
-    color: #fff;
+#myWorkHR{
+    display: none;
 }
+/*END NAV*/
 
-footer p{
-    text-align: center;
-    color: #fff;
-}
 
+
+
+
+
+/*HOME*/
 #homeSection{
-    width: 100%;
-    height: 90vh;
-    background-image: url("img/time-lapse-photography-of-curved-road-with-vehicles-passing-2437299.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    position: relative;
-    filter: grayscale(50%);
-}
-
-#homeSection h3{
-    padding-top: 3rem;
-}
-
-#homeSection h1{
-        font-size: 3rem;
-        font-weight: bold;
-        color: #dfdfdf;
-        letter-spacing: 5px;
-        text-shadow: 4px 4px 0px #000, 
-          -4px 0 0px #000,
-          7px 4px 0 #fff;
-          text-transform: uppercase;
-          
-    margin: 0 3rem;
-}
-
-#homeSection h3,
-#homeSection p{
-    color: #000000;
-    margin: 0 3rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    height: 9vh;
+    padding: 0rem 2rem 1rem 2rem;
 }
 
 #homeSection p{
     padding-top: .5rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #000000;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    color: #fff;
 }
+/*END HOME*/
 
+
+
+
+/*CONTACT*/
 #contactSection{
     display: none;
     margin: 3rem;
-    display: flex;
     flex-direction: column;
     row-gap: 1rem;
 }
-
-h1{
-    font-size: 2rem;
-    text-transform: uppercase;
-}
-/*SLUT*/
-
-
-.workSection article{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.workSection article a{
-    text-decoration: none;
-}
-
-.contactSection a{
-    color: #2C7B10;
-}
-
 #contactSection p a{
     color: #2C7B10;
     text-decoration: underline;
@@ -177,21 +147,62 @@ form .submit:hover{
     cursor: pointer;
 }
 
+/*END CONTACT*/
+
+
+
+
+
+
+/*WORK*/
 #workSection{
+    width: 100%;
+    height: 90vh;
+    background-image: url("img/pink-roses-in-close-up-photography-3817038.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    filter: grayscale(50%);
+    text-align: center;
+    gap: 1.5rem;
+    padding-top: 3rem;
     display: none;
-    margin: 3rem;
+}
+
+#workSection h1{
+    font-size: 3rem;
+    font-weight: bold;
+    color: #dfdfdf;
+    letter-spacing: 5px;
+    text-shadow: 4px 4px 0px #000, 
+      -4px 0 0px #000,
+      7px 4px 0 #fff;
+      text-transform: uppercase;
+}
+
+#workSection h3,
+#workSection p{
+    color: #000000;
+    padding-top: rem;
     display: flex;
     flex-direction: column;
-    text-align: center;
     gap: 1.5rem;
 }
 
+#workSection p{
+    padding-top: rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000000;
+}
+.workSection article{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
-
-.flex{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+.workSection article a{
+    text-decoration: none;
 }
 
 h4 {
@@ -201,12 +212,15 @@ h4 {
   margin: 3rem auto 0;
 }
 
-h4 > a {
+h4 a {
   text-decoration: none;
   font-size: 2rem;
   z-index: 1;
+  color: #000;
+  font-weight: bold;
 }
-h4 > a:before {
+
+h4 a:before {
   content: "";
   background: #2C7B10;
   position: absolute;
@@ -220,8 +234,8 @@ h4 > a:before {
   z-index: -1;
 }
 
-h4 > a:hover:before,
-h4 > a:focus:before {
+h4 a:hover:before,
+h4 a:focus:before {
   animation: .5s forwards hover-v linear;
   animation-fill-mode: forwards;
 }
@@ -259,11 +273,15 @@ h4 > a:focus:before {
       opacity: .02;
      }
 }
+/*END WORK*/
 
 
+
+
+/*FOOTER*/
 footer{
     background-color: #000000;
-    padding: 2rem;
+    padding: 1rem 0rem 1rem 0rem;
     bottom: 0px;
     position: fixed;
     width: 100vw;
@@ -292,4 +310,46 @@ footer i:hover, footer i:focus, footer i:active {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
     color: #2C7B10;
+}
+/*FOOTER*/
+
+
+@media screen and (min-width: 700px){
+    #homeSection{
+        height: 80vh;
+        background-image: url("img/white-feather-on-black-background-4004374.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        position: relative;
+        filter: grayscale(50%);
+        padding: 15vw 50vw 1rem 2rem;
+    }
+
+    #workSection{
+        background-image: url("img/plant-on-black-background-2508911.jpg");
+        height: 85vh;
+    }
+
+    h4 a {
+        color: #fff;
+    }
+}
+
+@media screen and (min-width: 800px){
+    #contactSection{
+        padding: 3rem 8rem;
+        margin: 0;
+        height: 80vh;
+        background-image: url("img/pink-jellyfishes-978342.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        position: relative;
+    }
+
+    .contactForm{
+        margin: auto;
+        width: 50vw;
+    }
 }
