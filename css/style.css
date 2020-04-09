@@ -1,3 +1,4 @@
+/*CSS ALLMÄNT*/
 * {
     margin: 0;
     color: rgb(212, 209, 209);
@@ -5,7 +6,7 @@
 }
 
 body{
-    background-color: #1d1d1d;
+    background-color: #131212;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -29,28 +30,59 @@ hr{
     border: 2px solid;
 }
 
-#homeHR{
-
-}
-
-#contactHR{
-    display: none;
-}
-
-#myWorkHR{
-    display: none;
-}
-
 nav div a{
     text-decoration: none;
     font-size: 1.2rem;
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 1rem;
+    width: 100%;
+    background-color: #000;
+    text-align: center;
+}
+
+i{
+    color: #2C7B10;
+}
+
+i:hover{
+    color: #fff;
+}
+
+footer p{
+    text-align: center;
+    color: #fff;
 }
 
 section{
     margin: 3rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    row-gap: 1rem;
+}
+
+h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+/*SLUT*/
+
+
+.workSection article{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.workSection article a{
+    text-decoration: none;
+}
+
+.contactSection a{
+    color: #2C7B10;
 }
 
 form{
@@ -88,9 +120,4 @@ form .submit{
 form .submit:hover{
     background-color: rgb(29, 78, 12);
     cursor: pointer;
-}
-
-h1{
-    font-size: 2rem;
-    text-transform: uppercase;
 }
