@@ -31,6 +31,14 @@ h3{
     padding-bottom: 1rem;
     padding-top: 3rem;
 }
+
+h4 {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: normal;
+    text-align: center;
+    margin: 3rem auto 0;
+  }
 /*END ALLMÄNT*/
 
 
@@ -46,7 +54,7 @@ nav{
     grid-template-columns: repeat(3, 1fr);
     background-color: #000000;
     text-align: center;
-    max-width: 60vw;
+    max-width: 100vw;
 }
 
 nav div{
@@ -58,6 +66,10 @@ nav div a{
     text-decoration: none;
     font-size: 1.4rem;
     text-transform: uppercase;
+}
+
+nav div:focus, nav div:hover, nav div:active{
+    background-color: #131212;
 }
 
 hr{
@@ -205,14 +217,7 @@ form .submit:hover{
     text-decoration: none;
 }
 
-h4 {
-  width: 100%;
-  font-weight: normal;
-  text-align: center;
-  margin: 3rem auto 0;
-}
-
-h4 a {
+h4 > a {
   text-decoration: none;
   font-size: 2rem;
   z-index: 1;
@@ -220,7 +225,7 @@ h4 a {
   font-weight: bold;
 }
 
-h4 a:before {
+h4 > a:before {
   content: "";
   background: #2C7B10;
   position: absolute;
@@ -234,8 +239,8 @@ h4 a:before {
   z-index: -1;
 }
 
-h4 a:hover:before,
-h4 a:focus:before {
+h4>a:hover:before,
+h4>a:focus:before {
   animation: .5s forwards hover-v linear;
   animation-fill-mode: forwards;
 }
@@ -337,6 +342,10 @@ footer i:hover, footer i:focus, footer i:active {
 }
 
 @media screen and (min-width: 800px){
+    nav{
+        max-width: 40vw;
+    }
+
     #contactSection{
         padding: 3rem 8rem;
         margin: 0;
